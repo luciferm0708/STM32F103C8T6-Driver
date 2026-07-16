@@ -177,7 +177,7 @@ The following examples use a USB-to-Serial adapter:
 ### Hardware Diagram
 
 <p align="center">
-    <img src="assets/stm32_ftdi_connection.png" alt="STM32 FTDI Connection" width="600">
+    <img src="assets/stm32_ftdi_connection.svg" alt="STM32 FTDI Connection" width="600">
 </p>
 
 ---
@@ -202,7 +202,7 @@ The USB-to-Serial adapter remains connected to USART1 for debugging.
 ### Hardware Diagram
 
 <p align="center">
-    <img src="assets/stm32_esp32_uart_connection.png" alt="STM32 ESP32 UART Connection" width="850">
+    <img src="assets/stm32_esp32_uart_connection.svg" alt="STM32 ESP32 UART Connection" width="850">
 </p>
 
 # Quick Start
