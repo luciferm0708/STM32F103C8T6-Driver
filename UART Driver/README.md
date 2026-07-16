@@ -148,6 +148,63 @@ Core/
 
 ---
 
+# Hardware Connections
+
+## 1. STM32 ↔ USB-to-Serial Adapter
+
+The following examples use a USB-to-Serial adapter:
+
+- UART Basic TX
+- UART Basic RX
+- UART Echo
+- UART Printf
+- UART LED Control
+
+### Wiring
+
+| STM32F103C8T6 | USB-to-Serial Adapter |
+|--------------|-----------------------|
+| PA9 (USART1 TX) | RX |
+| PA10 (USART1 RX) | TX |
+| GND | GND |
+
+> **Important**
+>
+> TX must always connect to RX.
+>
+> RX must always connect to TX.
+
+### Hardware Diagram
+
+<p align="center">
+    <img src="assets/stm32_ftdi_connection.png" alt="STM32 FTDI Connection" width="600">
+</p>
+
+---
+
+## 2. STM32 ↔ ESP32 UART Communication
+
+The following examples demonstrate UART communication with an ESP32.
+
+- UART STM32 ESP32
+- UART STM32 ESP32 LED Control
+
+### Wiring
+
+| STM32F103C8T6 | ESP32 |
+|--------------|-------|
+| PA2 (USART2 TX) | RX2 (GPIO16) |
+| PA3 (USART2 RX) | TX2 (GPIO17) |
+| GND | GND |
+
+The USB-to-Serial adapter remains connected to USART1 for debugging.
+
+### Hardware Diagram
+
+<p align="center">
+    <img src="assets/stm32_esp32_uart_connection.png" alt="STM32 ESP32 UART Connection" width="850">
+</p>
+
 # Quick Start
 
 ## 1. Configure UART Pins
