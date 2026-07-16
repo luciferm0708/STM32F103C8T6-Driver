@@ -251,8 +251,6 @@ The repository contains several example projects demonstrating different UART fe
 |----------|-------------|
 | UART Basic TX | Basic UART transmission |
 | UART Basic RX | Basic UART reception |
-| UART Echo | Echo received messages back to the sender |
-| UART Printf | Redirect `printf()` through UART |
 | UART LED Control | Control the Blue Pill onboard LED using UART commands |
 | UART STM32 ESP32 | Bidirectional UART communication between STM32 and ESP32 |
 | UART STM32 ESP32 LED Control | Control an ESP32 LED and synchronize LED status with the STM32 |
