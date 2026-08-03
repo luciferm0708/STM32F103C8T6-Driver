@@ -74,12 +74,14 @@ typedef enum{
 	GPIO_MODE_OUTPUT_OD_2MHZ 	= 0x22,
 	GPIO_MODE_OUTPUT_OD_50MHZ 	= 0x32,
 	//Alternate function
-	GPIO_MODE_AF_PP_10MHZ	 	= 0x13,/* MODE=01 CNF=10 alt-function push-pull */
-	GPIO_MODE_AF_PP_2MHZ        = 0x23,
-	GPIO_MODE_AF_PP_50MHZ       = 0x33,
-	GPIO_MODE_AF_OD_10MHZ       = 0x1B,/* MODE=01 CNF=11 alt-function open-drain */
-	GPIO_MODE_AF_OD_2MHZ        = 0x2B,
-	GPIO_MODE_AF_OD_50MHZ       = 0x3B
+	GPIO_MODE_AF_PP_10MHZ = 0x12,
+	GPIO_MODE_AF_PP_2MHZ  = 0x22,
+	GPIO_MODE_AF_PP_50MHZ = 0x32,
+
+	/* Alternate function Open-Drain */
+	GPIO_MODE_AF_OD_10MHZ = 0x13,
+	GPIO_MODE_AF_OD_2MHZ  = 0x23,
+	GPIO_MODE_AF_OD_50MHZ = 0x33,
 }gpio_mode_t;
 
 /** Pull direction, only meaningful for GPIO_MODE_INPUT_PULL. Ignored (and
@@ -212,6 +214,16 @@ static uint32_t gpio__afio_port_code(GPIO_TypeDef *port)
     return 0x0U;
 }
 
+static uint8_t gpio__is_af_mode(gpio_mode_t mode)
+{
+    return (mode == GPIO_MODE_AF_PP_10MHZ ||
+            mode == GPIO_MODE_AF_PP_2MHZ  ||
+            mode == GPIO_MODE_AF_PP_50MHZ ||
+            mode == GPIO_MODE_AF_OD_10MHZ ||
+            mode == GPIO_MODE_AF_OD_2MHZ  ||
+            mode == GPIO_MODE_AF_OD_50MHZ);
+}
+
 void gpio_clock_enable(GPIO_TypeDef *port)
 {
     if (port == GPIOA)      RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
@@ -223,9 +235,15 @@ void gpio_clock_enable(GPIO_TypeDef *port)
 #endif
 }
 
+
 void gpio_init(GPIO_TypeDef *port, const gpio_init_t *init)
 {
     gpio_clock_enable(port);
+
+    if (gpio__is_af_mode(init->mode))
+    {
+        gpio_afio_clock_enable();
+    }
 
     uint8_t mode_bits, cnf_bits;
     gpio__mode_to_bits(init->mode, &mode_bits, &cnf_bits);
