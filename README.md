@@ -50,12 +50,12 @@ STM32F103C8T6-Driver/
 | Driver | Status |
 |---------|:------:|
 | GPIO | ✅ Completed |
-| USART | 🚧 In Progress |
+| USART | ✅ Completed |
 | SPI | ⏳ Planned |
 | I²C | ⏳ Planned |
-| Timer | ⏳ Planned |
+| Timer | 🚧 In Progress |
 | PWM | ⏳ Planned |
-| ADC | ⏳ Planned |
+| ADC | 🚧 In Progress |
 | DMA | ⏳ Planned |
 | RTC | ⏳ Planned |
 
