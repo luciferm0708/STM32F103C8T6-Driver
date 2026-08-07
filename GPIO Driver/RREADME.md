@@ -220,8 +220,10 @@ This project is released under the MIT License.
 
 ---
 
-## Author
+# Author
 
-**Faiyaz Khan Sami** aka **Lucifer Morningstar**
+**Lucifer Morningstar** aka **Faiyaz Khan Sami**
 
-Embedded Systems | Bare-Metal Firmware | STM32 Development
+Embedded Systems and IoT Developer
+
+STM32 • ESP32 • Embedded C • Firmware Development
