@@ -51,14 +51,12 @@ STM32F103C8T6-Driver/
 |---------|:------:|
 | GPIO | ✅ Completed |
 | USART | ✅ Completed |
+| System Init & Delay| ✅ Completed |
 | SPI | ⏳ Planned |
 | I²C | ⏳ Planned |
-| Timer | 🚧 In Progress |
-| PWM | ⏳ Planned |
-| ADC | 🚧 In Progress |
+| Timer & PWM | ✅ Completed |
+| ADC | ✅ Completed |
 | DMA | ⏳ Planned |
-| RTC | ⏳ Planned |
-
 ---
 
 ## Current Features
@@ -134,14 +132,12 @@ https://github.com/luciferm0708/STM32F103C8T6-Driver.git
 
 - ✅ GPIO Driver
 - 🔄 USART Driver
+- ✅ System Init & Delay Driver
 - 🔄 SPI Driver
 - 🔄 I²C Driver
-- 🔄 Timer Driver
-- 🔄 PWM Driver
-- 🔄 ADC Driver
+- ✅ Timer & PWM Driver
+- ✅ ADC Driver
 - 🔄 DMA Driver
-- 🔄 RTC Driver
-- 🔄 Watchdog Driver
 
 ---
 
@@ -163,7 +159,8 @@ This project is licensed under the MIT License.
 
 **Faiyaz Khan Sami** aka **Lucifer Morningstar** 
 
-Computer Science Engineer | Embedded Systems Enthusiast
+Computer Science Engineer | Embedded Systems and IoT Developer 
+Quantum Computing and Cryptography Enthusiast
 
 GitHub: https://github.com/luciferm0708
 
