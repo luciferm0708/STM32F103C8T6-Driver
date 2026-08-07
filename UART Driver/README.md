@@ -488,6 +488,14 @@ Contributions are welcome!
 
 If you find a bug, have a suggestion, or would like to improve the driver, feel free to open an issue or submit a pull request.
 
+If you find this project useful, consider giving it a ⭐ on GitHub.
+
 ---
 
-If you find this project useful, consider giving it a ⭐ on GitHub.
+# Author
+
+**Lucifer Morningstar** aka **Faiyaz Khan Sami**
+
+Embedded Systems and IoT Developer
+
+STM32 • ESP32 • Embedded C • Firmware Development
